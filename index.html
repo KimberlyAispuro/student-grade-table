@@ -8,7 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
-    <h1>Student Grade Table</h1><br>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1>Student Grade Table</h1>
+          </div>
+          <div class="col">
+            <h2 class="text-right">Average Grade  <span class="badge badge-dark"></span></h2>
+          </div>
+        </div>
+      </div>
+    </header>
     <table class="table table-striped">
         <thead class="thead-dark">
           <tr>
@@ -23,6 +34,7 @@
       </table>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
       <script src="components/grade-table.js"></script>
+      <script src="components/page-header.js"></script>
       <script src="components/app.js"></script>
       <script src="main.js"></script>
 </body>
