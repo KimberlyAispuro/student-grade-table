@@ -21,7 +21,7 @@ class App {
         for(var i=0; i<grades.length; i++){
             sum += grades[i].grade;
         }
-        var average = sum/grades.length;
+        var average = (sum/grades.length).toFixed(2);
         this.pageHeader.updateAverage(average);
     }
     getGrades(){
@@ -60,6 +60,16 @@ class App {
     }
     deleteGrade(id){
         console.log(id);
+        $.ajax({
+            method:"DELETE",
+            url:"https://sgt.lfzprototypes.com/api/grades/"+id,
+            headers: {
+                "X-Access-Token": "NmVKS6NW"
+            },
+            success: this.handleDeleteGradeSuccess,
+            error: this.handleDeleteGradeError
+        });
+
     }
     handleDeleteGradeError(error){
         console.error(error);
