@@ -21,7 +21,7 @@ class App {
         for(var i=0; i<grades.length; i++){
             sum += grades[i].grade;
         }
-        var average = (sum/grades.length).toFixed(2);
+        var average = (sum/grades.length);
         this.pageHeader.updateAverage(average);
     }
     getGrades(){
